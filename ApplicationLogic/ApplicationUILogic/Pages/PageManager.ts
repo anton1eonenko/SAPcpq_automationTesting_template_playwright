@@ -11,6 +11,15 @@ import { ModifyPassword } from "../Components/UserMenu/UserPage/ModifyPassword";
 import { ModifyPersonalDetails } from "../Components/UserMenu/UserPage/ModifyPersonalDetails"; 
 import { UserDetails } from "../Components/UserMenu/UserPage/UserDetails"; 
 import { UserPageHeaderMenu } from "../Components/UserMenu/UserPage/UserPageHeaderMenu";
+import { QuoteHeader } from "../Components/Quote/QuoteHeader";
+import { CustomFields } from "../Components/Quote/HomeCart/CustomFields";
+import { Products } from "../Components/Quote/HomeCart/Products"; 
+import { QuoteInfo } from "../Components/Quote/HomeCart/QuoteInfo"; 
+import { Totals } from "../Components/Quote/HomeCart/Totals"; 
+import { TotalSummary } from "../Components/Quote/HomeCart/TotalSummary"; 
+import { InvolvedParties } from "../Components/Quote/InvolvedParties/InvolvedParties"; 
+import { ShippingInfo } from "../Components/Quote/ShippingInfo/ShippingInfo";
+
 
 export class PageManager {
     page: Page; 
@@ -26,6 +35,15 @@ export class PageManager {
     modifyPersonalDetails;
     userDetails; 
     userPageHeaderMenu;
+    quoteHeader;
+    customFields; 
+    products; 
+    quoteInfo; 
+    totals; 
+    totalSummary;
+    involvedParties; 
+    shippingInfo; 
+
 
     constructor(page) {
         this.page = page; 
@@ -41,5 +59,13 @@ export class PageManager {
         this.modifyPersonalDetails = new ModifyPersonalDetails(page); 
         this.userDetails = new UserDetails(page); 
         this.userPageHeaderMenu = new UserPageHeaderMenu(page); 
-    }
-}
+        this.quoteHeader = new QuoteHeader(page);
+        this.customFields = new CustomFields(page); 
+        this.products = new Products(page); 
+        this.quoteInfo = new QuoteInfo(page); 
+        this.totals = new Totals(page); 
+        this.totalSummary = new TotalSummary(page); 
+        this.involvedParties = new InvolvedParties(page); 
+        this.shippingInfo = new ShippingInfo(page); 
+    };
+};

@@ -12,7 +12,9 @@ test.describe('abc', async () => {
         await pageManager.loginPage.LogIn('aleonenko', 'Qwerty123');  
         Log.step('3. Выбираем категорию Хардвэйр');
         await pageManager.categoriesDetails.SelectNecessaryCategory('QA: Hardware'); 
-        Log.step('4. Выбираем нужный ноут');
+        Log.step('4. Выбираем нужный ноут и нажиамем Add');
         await pageManager.mainCatalog.ClickOnButtons.Add('ASUS_antonleonenko');
-    })
-})
+        Log.step('5. Получаем стоимость товара и делаем проверку'); 
+        await expect(pageManager.totals.Fields.Price).toHaveText('6,000.00');
+    });
+});
