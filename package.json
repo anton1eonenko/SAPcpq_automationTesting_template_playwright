@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "generateReport": "npx allure generate ./allure-results --clean", 
+    "openAllure": "npx allure open"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.40.0",
-    "@types/node": "^20.10.0"
+    "@types/node": "^20.10.0",
+    "allure-commandline": "^2.24.1",
+    "allure-playwright": "^2.9.2"
   }
 }

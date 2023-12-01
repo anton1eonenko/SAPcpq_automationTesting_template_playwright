@@ -19,6 +19,8 @@ import { Totals } from "../Components/Quote/HomeCart/Totals";
 import { TotalSummary } from "../Components/Quote/HomeCart/TotalSummary"; 
 import { InvolvedParties } from "../Components/Quote/InvolvedParties/InvolvedParties"; 
 import { ShippingInfo } from "../Components/Quote/ShippingInfo/ShippingInfo";
+import { ConfiguratorCommon } from "../Components/Configurator/ConfiguratorCommon";
+import { ASUS_antonleonenko } from "../Components/Configurator/ProductsAttributes/ASUS_antonleonenko";
 
 
 export class PageManager {
@@ -43,6 +45,8 @@ export class PageManager {
     totalSummary;
     involvedParties; 
     shippingInfo; 
+    configuratorCommon;
+    ASUS_antonleonenko;
 
 
     constructor(page) {
@@ -67,5 +71,7 @@ export class PageManager {
         this.totalSummary = new TotalSummary(page); 
         this.involvedParties = new InvolvedParties(page); 
         this.shippingInfo = new ShippingInfo(page); 
+        this.configuratorCommon = new ConfiguratorCommon(page); 
+        this.ASUS_antonleonenko = new ASUS_antonleonenko(page); 
     };
 };
