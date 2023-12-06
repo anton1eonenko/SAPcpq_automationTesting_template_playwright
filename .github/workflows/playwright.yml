@@ -30,7 +30,8 @@ jobs:
     - name: Generate Allure report
       run: |
         npm install -g allure-commandline
-        allure generate
+        allure generate --clean -o allure-report
+        mv allure-report allure-results/
 
     - name: Archive Allure report
       uses: actions/upload-artifact@v3
