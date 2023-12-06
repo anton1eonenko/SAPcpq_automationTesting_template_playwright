@@ -30,13 +30,14 @@ jobs:
     - name: Generate Allure report
       run: |
         npm install -g allure-commandline
-        allure generate --clean -o allure-report
-        mv allure-report allure-results/
+        allure generate
 
     - name: Archive Allure report
       uses: actions/upload-artifact@v3
       if: always()
       with:
         name: allure-report
-        path: allure-results
+        path: 
+        - allure-results/
+        - allure-report/
         retention-days: 30
