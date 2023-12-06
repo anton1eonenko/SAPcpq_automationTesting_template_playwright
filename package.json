@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "generateReport": "npx allure generate ./allure-results --clean", 
-    "openAllure": "npx allure open"
+    "openAllure": "npx allure open",
+    "test": "npx playwright test"
   },
   "author": "",
   "license": "ISC",

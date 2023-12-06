@@ -16,10 +16,11 @@ export const test = base.extend<TestOptions & {pageManager: PageManager}> ({
 }); 
 
 export class BaseTest {
-    
+
     static setFeatureSuite = {
         quote: () => allure.suite('Quote'), 
         configurator: () => allure.suite('Configurator'),
+        login: () => allure.suite('Login'), 
     }
 };
 

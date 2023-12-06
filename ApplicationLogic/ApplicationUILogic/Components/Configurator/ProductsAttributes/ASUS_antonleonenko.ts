@@ -7,7 +7,7 @@ export class ASUS_antonleonenko extends BaseApplicationPage {
     }; 
 
     Containers = {
-        MainContainer: this.page.locator('[id="attributesContainer"]')
+        MainContainer: this.page.locator('[id="attributesContainer"]'),
     }; 
 
     ChooseAttributes = {
