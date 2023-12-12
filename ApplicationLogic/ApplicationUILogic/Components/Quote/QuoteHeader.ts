@@ -10,6 +10,10 @@ export class QuoteHeader extends BaseApplicationPage {
         CartTabsContainer: this.page.locator('[id="cartTabsContainer"]'),
     }; 
 
+    Elements = {
+        QuoteNumber: this.Containers.CartHeaderContainer.locator('[data-bind*="Data.title"]'),
+    }
+
     Buttons = {
         CheckOut: this.Containers.CartHeaderContainer.locator('[role="button"]').locator('"CheckOut"'), 
         AddItem: this.Containers.CartHeaderContainer.locator('[role="button"]').locator('"Add Item"'), 
