@@ -4,5 +4,5 @@ export enum Url {
 
 export enum Data {
     login = 'aleonenko', 
-    password = 'Qwerty123'
+    password = 'StronPassword123!'
 }
